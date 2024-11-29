@@ -1,0 +1,8 @@
+
+fastapi
+uvicorn
+pydantic
+requests
+sqlalchemy
+transformers
+psycopg2-binary
