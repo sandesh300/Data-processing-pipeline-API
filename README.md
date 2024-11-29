@@ -61,7 +61,7 @@ psycopg2-binary
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/your-username/data-processing-pipeline.git
+   git clone https://github.com/sandesh300/data-processing-pipeline.git
    cd data-processing-pipeline
    ```
 
@@ -91,18 +91,21 @@ psycopg2-binary
 
 2. **Access the API:**
    - The API will be available at `http://localhost:8000`.
+### FastAPI-doc
+![Screenshot (61)](https://github.com/user-attachments/assets/c1ba2483-bd53-4054-9507-f213cfa27576)
 
 ## API Endpoints
 
 ### 1. Process Text
 - **Endpoint:** `POST /process-text/`
+- **URL**: `http://localhost:8000/process-text/`
 - **Request:**
   ```json
   {
       "text": "You are a helpful AI assistant. Here's a user question: How do gaming phones differ from regular smartphones? Please provide a clear, structured response focusing on key features."
   }
   ```
-- **Response:**
+- **Response: 200 OK**
   ```json
   {
       "field1": "**Key Differences Between Gaming Phones and Regular Smartphones**\n\n**1. Processing Power and Graphic",
@@ -114,7 +117,8 @@ psycopg2-binary
 
 ### 2. Process Text Local
 - **Endpoint:** `POST /process-text-local/`
-- **Request:**
+- **URL**: `http://localhost:8000/process-text-local/`
+- **Request: 200 OK**
   ```json
   {
       "text": "Act as an AI expert. Given the question: How do gaming phones differ from regular smartphones? List the main gaming-specific features and hardware differences."
@@ -132,13 +136,14 @@ psycopg2-binary
 
 ### 3. Compare Outputs
 - **Endpoint:** `POST /compare-outputs/`
+- **URL**: `http://localhost:8000/compare-outputs/`
 - **Request:**
   ```json
   {
       "text": "Compare and analyze: How do gaming phones differ from regular smartphones? Provide specific features and capabilities."
   }
   ```
-- **Response:**
+- **Response: 200 OK**
   ```json
   {
       "field1_match": false,
