@@ -211,3 +211,4 @@ async def compare_outputs_endpoint(input_data: TextInput, db: Session = Depends(
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
+    
