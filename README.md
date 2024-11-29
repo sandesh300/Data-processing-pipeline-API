@@ -118,13 +118,13 @@ psycopg2-binary
 ### 2. Process Text Local
 - **Endpoint:** `POST /process-text-local/`
 - **URL**: `http://localhost:8000/process-text-local/`
-- **Request: 200 OK**
+- **Request:**
   ```json
   {
       "text": "Act as an AI expert. Given the question: How do gaming phones differ from regular smartphones? List the main gaming-specific features and hardware differences."
   }
   ```
-- **Response:**
+- **Response:200 OK**
   ```json
   {
       "field1": "{'field1': 'Act as an AI expert. Question: Act as an AI expert. Given the question: How do gaming ph",
