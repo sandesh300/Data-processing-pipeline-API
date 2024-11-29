@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 import requests
@@ -9,7 +10,7 @@ from local_llm import process_text_local
 
 app = FastAPI()
 
-API_KEY = "AIzaSyALpRWGOdEo2F2Hi0V7NIcxNTGV9tGO5dQ"
+API_KEY = os.getenv("GEMINI_API_KEY")
 API_URL = f"https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key={API_KEY}"
 
 # Dependency
@@ -211,4 +212,4 @@ async def compare_outputs_endpoint(input_data: TextInput, db: Session = Depends(
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
-    
+
